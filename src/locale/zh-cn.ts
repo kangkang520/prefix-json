@@ -1,6 +1,7 @@
 import { setError } from "../errors"
 
 setError({
+	ILLEGAL_KEY_IN_OBJECT: 'Object键名称不合法',
 	EOF_IN_OBJECT: 'Object异常结束',
 	EOF_IN_VALUE: '希望是一个值，但是却结束了',
 	EOF_IN_ARRAY: 'Array异常结束',

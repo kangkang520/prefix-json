@@ -133,9 +133,11 @@ export function parseAst(content: string): DataTypes {
 	//读取名称
 	function parseName() {
 		let buffer = ''
+		//首字母检测
+		if (!/[a-zA-Z_\$]/.test(ch()!)) return error('ILLEGAL_KEY_IN_OBJECT')
 		while (true) {
 			const c = ch()
-			if (c && /[a-zA-Z0-9_$]/.test(c)) buffer += c
+			if (c && /[a-zA-Z0-9_\$]/.test(c)) buffer += c
 			else break
 			next()
 		}

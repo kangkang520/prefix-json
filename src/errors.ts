@@ -1,5 +1,7 @@
 
 export interface ErrorConfig {
+	/** Object数据块中key不合法 */
+	ILLEGAL_KEY_IN_OBJECT: string
 	/** 在Object块中遇到文件结束 */
 	EOF_IN_OBJECT?: string
 	/** 在应该是值得地方遇到文件结束 */
@@ -18,6 +20,7 @@ export interface ErrorConfig {
 
 //错误列表
 export const errorsConfig: ErrorConfig = {
+	ILLEGAL_KEY_IN_OBJECT: 'Illegal name',
 	EOF_IN_OBJECT: 'Object expected',
 	EOF_IN_VALUE: 'Value expected',
 	EOF_IN_ARRAY: 'Array expected',

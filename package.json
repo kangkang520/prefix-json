@@ -1,6 +1,6 @@
 {
 	"name": "prefix-json",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "",
 	"main": "dist/index.js",
 	"types": "typings/index.d.ts",
