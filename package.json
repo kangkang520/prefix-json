@@ -1,16 +1,28 @@
 {
-  "name": "prefix-json",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "http://git.iemmp.com/yizhi-lib/prefix-json.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+	"name": "prefix-json",
+	"version": "1.0.2",
+	"description": "",
+	"main": "dist/index.js",
+	"types": "typings/index.d.ts",
+	"scripts": {},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kangkang520/prefix-json.git"
+	},
+	"keywords": [
+		"json",
+		"jsonc",
+		"postfix",
+		"config",
+		"configure",
+		"configuration",
+		"ini"
+	],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "^12.6.2",
+		"ts-node": "^8.3.0",
+		"typescript": "^3.5.3"
+	}
 }
