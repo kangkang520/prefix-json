@@ -258,7 +258,7 @@ export function parseAst(content: string): DataTypes {
 		const prefix = parseName()
 		//读取字符串
 		const _c = ch()
-		if (_c != '"' && _c != "'") return error('EXPECT_BUT', [['"', "'"], c])
+		if (_c != '"' && _c != "'") return error('EXPECT_BUT', [['"', "'"], _c])
 		const data = parseString(_c)
 		return {
 			kind: 'common',
