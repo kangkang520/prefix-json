@@ -70,7 +70,7 @@ export class ParseError extends Error {
  * 将文件内容解析为语法树
  * @param content 文件内容
  */
-export function parseAst(content: string): IObjectData {
+export function parseAst(content: string): DataTypes {
 	//数据读取标识
 	let index = 0, line = 0, col = 0
 
@@ -97,12 +97,13 @@ export function parseAst(content: string): IObjectData {
 
 	//跳过空白或注释
 	function skipSpace() {
+		if (eoc()) return
 		while (['\r', '\n', ' ', '\t'].includes(content[index])) next()
 		//注释
 		if (is('//')) {
 			next(2)
 			while (true) {
-				if (content[index] == '\n') break
+				if (content[index] == '\n' || eoc()) break
 				next()
 			}
 			skipSpace()
@@ -322,5 +323,9 @@ export function parseAst(content: string): IObjectData {
 		else return parseCustom()
 	}
 
-	return parseObject()
+	skipSpace()
+	const result = parseValue()
+	skipSpace()
+	if (!eoc()) error('EXPECT_BUT', [['EOF'], ch()])
+	return result
 }

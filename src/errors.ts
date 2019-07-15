@@ -18,12 +18,12 @@ export interface ErrorConfig {
 
 //错误列表
 export const errorsConfig: ErrorConfig = {
-	EOF_IN_OBJECT: 'Got EOF in object',
-	EOF_IN_VALUE: 'Need a value, but EOF got',
-	EOF_IN_ARRAY: 'Got EOF in array',
-	EOF_IN_NUMBER: 'Got EOF in number',
-	EOF_IN_STRING: 'Got EOF in object',
-	BR_IN_STRING: 'Got break line in string',
+	EOF_IN_OBJECT: 'Object expected',
+	EOF_IN_VALUE: 'Value expected',
+	EOF_IN_ARRAY: 'Array expected',
+	EOF_IN_NUMBER: 'Number expected',
+	EOF_IN_STRING: 'String expected',
+	BR_IN_STRING: 'String expected',
 	EXPECT_BUT: (e, b) => `Expect ${e.map(ei => `'${ei}'`).join(',')}, but '${b}' got`
 }
 
