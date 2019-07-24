@@ -6,6 +6,25 @@
 * Object类型或Array类型的最后一个元素允许以“`,`”结束。
 * json中键不用加引号
 
+## 配置实例
+```
+// 服务器配置
+{
+    // 服务器监听的端口
+    listen: 3000,
+    // 视图目录
+    viewDir: D"../views",
+    // 静态资源目录
+    staticDir: D"../static",
+    // 缓存目录
+    tempDir: D:"../tmp",
+    //数据库配置
+    database: {
+        //... ...
+    }
+}
+```
+
 ## 安装
 ```
 npm install --save prefix-json
